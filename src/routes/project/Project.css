@@ -1,0 +1,19 @@
+.projectcontact_container{
+    margin-top: 90px;
+    padding: 10px 20px;
+}
+.projects_menu{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 70px;
+    margin:40px 20px;
+
+}
+
+@media screen and (max-width:1000px) {
+    .projects_menu{
+        grid-template-columns:  auto;
+    }
+}
+
+

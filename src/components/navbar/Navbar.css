@@ -1,0 +1,116 @@
+.myprofile_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myprofile_image img{
+    width: 50px;
+    height: 50px;
+    padding: 5px 0;
+    border-radius: 100%;  
+}
+.myprofile_image a{
+    margin-left: 10px;
+    white-space: nowrap;
+}
+.navbar_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 40px;
+    font-weight: 500;
+    background-color: #1b2430;
+    
+}
+.navbar_items{
+   
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+}
+.navbar_items li{
+   padding: 0 20px;  
+}
+.navbar_items Link{
+    color: white;
+}
+
+.menu_icon_wrapper{
+    display: none;
+    z-index: 0;   
+}
+.menu_icon_wrapper:hover{
+    color: var(--color-primary);
+    transition: 0.4s ease-in-out;
+
+}
+.menu_icon_wrapper::before{
+    
+    position: absolute;
+    content: "";
+    background-color: rgb(200, 200, 200);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: -3;
+    margin-top: 3px;
+    transform: translate(-25% ,-30%)scale(0) ;    
+}
+.menu_icon_wrapper:hover::before{
+    
+    transform: translate(-25% ,-30%)scale(1);
+    transition: .7s ease-in-out;
+}
+
+@media screen and (max-width:680px) {
+    .navbar_items{
+       width: 100vw;
+        height: 100vh;
+        background: var(--color-drakula);
+        position: absolute;
+        top: 78px;
+        left: -120%;      
+        transition: 1s; 
+        z-index: 10000; 
+           
+    }.navbar_items.active{
+       left: 0%;
+    }
+    .navbar_wrapper{
+        height: 55px;
+    }
+   
+    .menu_icon_wrapper{
+        display: block;
+       
+        
+    }
+    .myprofile_image img{
+        width: 40px;
+        height: 40px;
+    }
+    
+}
+.small_screen{
+    background-color: black;
+    color: white;
+    width: 100%;
+   
+
+}
+.small_device_wrapper{
+    background-color: var(--color-drakula);
+    height: 100vh;
+    
+   
+}
+.small_device_wrapper ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+}
+.small_device_wrapper ul li{
+    margin: 40px;
+}

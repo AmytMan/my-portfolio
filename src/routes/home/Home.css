@@ -1,0 +1,117 @@
+.navbar_position{
+  position:fixed ;
+  width: 100%;
+  z-index: 10;
+}
+.home_background_image{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.home_background_image::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  opacity: 0.7;
+}
+.home_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+    text-align: center;
+} 
+  .text span {
+    font-size: 30px;
+    padding: 0 4px;
+    color: #fff;
+    animation: zoomup 3s linear infinite;
+    animation-delay: calc(200ms * var(--i));
+  }
+  
+  @keyframes zoomup {
+    0%,
+    100% {
+      color: #07726f;
+      filter: blur(2px)  brightness(200%);
+      text-shadow: 0 0 10px #00c2ba, 0 0 20px #00c2ba, 0 0 30px #00c2ba,
+        0 0 40px #00c2ba;
+    }
+  
+    5%,
+    95% {
+      filter: blur(0);
+      color: #fff;
+      text-shadow: none;
+    }
+  }
+  .arrowdown_animation{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    animation: moveupdown 5s linear infinite;
+  }
+  @keyframes moveupdown{
+     0%{
+      transform: translateY(-40px);
+    }
+    50%{
+      transform: translateY(40px);
+    }
+    100%{
+      transform: translateY(-40px);
+    }
+  }
+  .arrowdown_animation img{
+    width: 60px;
+  }
+  
+
+@media screen and (max-width:1000px) {
+  .home_background_image{
+    width:auto;
+  }
+  .home_container{
+    top: 30%;
+  }
+  .arrowdown_animation img{
+    width: 40px;
+  } 
+}
+@media screen and (max-width:780px){
+  .home_container{
+    top: 40%;
+  } 
+  .text span{
+    font-size: 30px;
+  }
+  .arrowdown_animation{
+    display: none;
+  }  
+}
+@media screen and (max-width:580px){
+  .home_container{
+    top: 22%;
+  }
+  .home_container h4{
+    font-size: 14px;
+    font-weight: 300; 
+  }
+  .text span{
+    font-size: 18px;
+  } 
+}
+@media  screen  and (max-width:380px) {
+  .home_container{
+    top: 30%;
+  }
+  .home_container h4{
+    font-size: 12px; 
+  } 
+}
