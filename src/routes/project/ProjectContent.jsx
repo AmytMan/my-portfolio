@@ -34,7 +34,7 @@ function ProjectContent() {
                     <h1><GiStrikingDiamonds/> Portfolio Website</h1>
                     <p>I have created a portfolio website using React that includes several key sections. The home page provides an overview of my work, while the About section provides additional details about my skills, education, and expertise. In the Project section, I showcase some of my best work and provide links for visitors to explore each project in more depth. Finally, the Contact section includes various ways to contact me, such as email, phone, or social media.</p>
                     <button>
-                        <a href="">Live Link</a>
+                        <a href="https://github.com/AmytMan/my-portfolio" target="_blank">Live Link</a>
                     </button>
                 </div>
             </div>
